@@ -2,7 +2,9 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import fitz  # PyMuPDF
 import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI()
 
 # CORS
@@ -42,34 +44,48 @@ async def upload_file(file: UploadFile = File(...)):
 # -------------------------
 # ASK QUESTION (OLLAMA AI)
 # -------------------------
+from groq import Groq
+import os
+
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
+
 @app.post("/query")
 async def ask_question(payload: dict):
     global pdf_text
 
     question = payload.get("question")
 
-    try:
-        import requests
+    if not pdf_text:
+        return {"answer": "No PDF uploaded."}
 
-        response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={
-                "model": "mistral",
-                "prompt": f"""
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": f"""
+You are a legal AI assistant.
+
+Answer ONLY from the PDF content below.
+
 PDF CONTENT:
 {pdf_text}
-
-QUESTION:
-{question}
-""",
-                "stream": False
-            }
+"""
+                },
+                {
+                    "role": "user",
+                    "content": question
+                }
+            ],
+            model="llama-3.3-70b-versatile",
         )
 
-        data = response.json()
+        answer = chat_completion.choices[0].message.content
 
         return {
-            "answer": data["response"]
+            "answer": answer
         }
 
     except Exception as e:
