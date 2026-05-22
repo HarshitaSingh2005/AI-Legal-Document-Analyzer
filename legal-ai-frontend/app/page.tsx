@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://127.0.0.1:8000"; // backend URL
+const API = "https://ai-legal-backend-0f42.onrender.com"; // backend URL
 
 /* ─────────── tiny inline style helpers ─────────── */
 const S = {
