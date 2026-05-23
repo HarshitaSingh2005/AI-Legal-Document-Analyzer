@@ -5,22 +5,18 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-app = FastAPI()
-@app.get("/")
-async def root():
-    return {"status": "ok"}
+
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://ai-legal-document-analyzer-seven.vercel.app",
-        "http://localhost:3000",
-        "*"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.get("/")
+async def root():
+    return {"status": "ok"}
 
 # store pdf text globally (simple version)
 pdf_text = ""
@@ -98,3 +94,4 @@ PDF CONTENT:
         return {
             "answer": str(e)
         }
+    
