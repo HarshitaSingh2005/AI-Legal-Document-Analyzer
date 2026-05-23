@@ -4,7 +4,10 @@ import fitz  # PyMuPDF
 import requests
 from dotenv import load_dotenv
 
+# ✅ CORRECT
 load_dotenv()
+
+app = FastAPI()  # ← ADD THIS LINE
 
 # CORS
 app.add_middleware(
