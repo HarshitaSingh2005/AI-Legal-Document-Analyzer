@@ -683,14 +683,14 @@ export default function Home() {
                 cursor: !file ? "not-allowed" : "pointer",
               }}
             >
-              {loading ? "⏳ Processing…" : "⬆️ Upload & Analyze PDF"}
+              {loading ? "⏳ Processing…" : "⬆ Upload & Analyze PDF"}
             </button>
           </div>
 
           {/* ── ASK QUESTION CARD ── */}
           <div className="card-hover" style={S.card}>
             <div style={S.cardTitle}>
-              <span style={{ fontSize: 22 }}>🤖</span> Ask Legal Questions
+              <span style={{ fontSize: 22 }}></span> Ask Legal Questions
             </div>
             <p style={S.cardSubtitle}>
               Ask anything about the uploaded document — clauses, obligations, risks, or summaries.
@@ -721,7 +721,7 @@ export default function Home() {
                 cursor: !question.trim() ? "not-allowed" : "pointer",
               }}
             >
-              {loading ? "🧠 Thinking…" : "⚖️ Ask AI Counsel"}
+              {loading ? "🧠 Thinking…" : " Ask AI Counsel"}
             </button>
           </div>
 
@@ -754,9 +754,9 @@ export default function Home() {
             <h2 style={S.howTitle}>How It Works</h2>
             <div style={S.stepsGrid}>
               {[
-                { num: "1", icon: "📄", title: "Upload Legal PDF", desc: "Drag & drop or select any legal PDF document. We support contracts, agreements, briefs, and more." },
-                { num: "2", icon: "🤖", title: "AI Processes Document", desc: "Our AI reads, indexes, and understands the full legal document — structure, clauses, and context." },
-                { num: "3", icon: "⚖️", title: "Get Legal Insights", desc: "Ask plain-English questions and receive precise, contextualized answers backed by the document." },
+                { num: "1",  title: "Upload Legal PDF", desc: "Drag & drop or select any legal PDF document. We support contracts, agreements, briefs, and more." },
+                { num: "2", title: "AI Processes Document", desc: "Our AI reads, indexes, and understands the full legal document — structure, clauses, and context." },
+                { num: "3",  title: "Get Legal Insights", desc: "Ask plain-English questions and receive precise, contextualized answers backed by the document." },
               ].map((step) => (
                 <div key={step.num} className="step-hover" style={S.stepCard}>
                   <div style={S.stepNum}>{step.num}</div>
