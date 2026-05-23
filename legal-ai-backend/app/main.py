@@ -15,9 +15,10 @@ app = FastAPI()  # ← ADD THIS LINE
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",
-        "https://ai-legal-document-analyzer-seven.vercel.app",
-    ],
+    "http://localhost:3000",
+    "https://ai-legal-document-analyzer-seven.vercel.app",
+    "https://ai-legal-document-analyzer-2ry512v7y.vercel.app",
+]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
