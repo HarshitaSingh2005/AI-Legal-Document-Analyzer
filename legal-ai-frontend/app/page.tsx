@@ -506,7 +506,7 @@ export default function Home() {
       {/* ─────────── NAVBAR ─────────── */}
       <nav style={S.nav}>
         <a href="#" style={S.navLogo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-          <span style={{ fontSize: 22 }}>⚖️</span>
+          <span style={{ fontSize: 22 }}></span>
           <span>LexAI</span>
           <span style={{
             background: "#6B9071", color: "#0F2A1D", fontSize: 10,
@@ -599,7 +599,7 @@ export default function Home() {
                 onClick={() => scrollTo("upload")}
                 style={{ ...S.btnPrimary, width: "auto", padding: "14px 32px", marginTop: 0 }}
               >
-                📄 Upload PDF
+                 Upload PDF
               </button>
               <button
                 onClick={() => scrollTo("how-it-works")}
@@ -618,7 +618,7 @@ export default function Home() {
 
             {/* trust strip */}
             <div style={{ display: "flex", gap: 24, justifyContent: "center", marginTop: 40, flexWrap: "wrap" }}>
-              {["🔒 Secure Processing", "⚡ Real-Time Analysis", "🧠 AI-Powered"].map((t) => (
+              {[" Secure Processing", " Real-Time Analysis", " AI-Powered"].map((t) => (
                 <span key={t} style={{ color: "#375534", fontSize: 13, fontWeight: 500, display: "flex", alignItems: "center", gap: 5 }}>
                   {t}
                 </span>
@@ -633,7 +633,7 @@ export default function Home() {
           {/* ── UPLOAD CARD ── */}
           <div id="upload" className="card-hover" style={S.card}>
             <div style={S.cardTitle}>
-              <span style={{ fontSize: 22 }}>📄</span> Upload Legal Document
+              <span style={{ fontSize: 22 }}></span> Upload Legal Document
             </div>
             <p style={S.cardSubtitle}>
               Drag & drop your PDF or click to browse. AI will extract and index all content automatically.
@@ -652,7 +652,7 @@ export default function Home() {
                 style={S.fileInput}
                 onChange={(e) => setFile(e.target.files?.[0] || null)}
               />
-              <span style={S.uploadIcon}>{dragging ? "📂" : "☁️"}</span>
+              <span style={S.uploadIcon}></span>
               <p style={S.uploadText}>{dragging ? "Drop your PDF here" : "Upload Legal PDF"}</p>
               <p style={S.uploadHelper}>
                 Only PDF files are supported.<br />
@@ -683,7 +683,7 @@ export default function Home() {
                 cursor: !file ? "not-allowed" : "pointer",
               }}
             >
-              {loading ? "⏳ Processing…" : "⬆ Upload & Analyze PDF"}
+              {loading ? " Processing…" : "⬆ Upload & Analyze PDF"}
             </button>
           </div>
 
@@ -721,7 +721,7 @@ export default function Home() {
                 cursor: !question.trim() ? "not-allowed" : "pointer",
               }}
             >
-              {loading ? "🧠 Thinking…" : " Ask AI Counsel"}
+              {loading ? "Thinking…" : "Ask AI Counsel"}
             </button>
           </div>
 
@@ -729,7 +729,7 @@ export default function Home() {
           {loading && (
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div style={S.loadingPill}>
-                <span>⚙️</span> AI is processing your request…
+                <span></span> AI is processing your request…
               </div>
             </div>
           )}
@@ -787,7 +787,7 @@ export default function Home() {
 
         {/* ── FOOTER ── */}
         <footer style={S.footer}>
-          <span>⚖️ <strong>LexAI</strong> — AI Legal Document Analyzer &nbsp;·&nbsp; © {new Date().getFullYear()} All rights reserved</span>
+          <span><strong>LexAI</strong> — AI Legal Document Analyzer &nbsp;·&nbsp; © {new Date().getFullYear()} All rights reserved</span>
         </footer>
       </div>
     </>
