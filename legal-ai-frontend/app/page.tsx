@@ -14,8 +14,8 @@ const S = {
     left: 0,
     right: 0,
     zIndex: 100,
-    background: "#145858",
-    boxShadow: "0 2px 20px rgba(20,88,88,0.35)",
+    background: "#0F2A1D",
+    boxShadow: "0 2px 20px rgba(55,85,52,0.35)",
     height: 64,
     display: "flex",
     alignItems: "center",
@@ -23,7 +23,7 @@ const S = {
     justifyContent: "space-between",
   },
   navLogo: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 800,
     fontSize: 20,
     color: "#fff",
@@ -41,7 +41,7 @@ const S = {
   navLink: {
     color: "rgba(255,255,255,0.75)",
     textDecoration: "none",
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 500,
     fontSize: 14,
     padding: "6px 14px",
@@ -52,7 +52,7 @@ const S = {
   /* ── page ── */
   page: {
     minHeight: "100vh",
-    background: "linear-gradient(160deg, #e8f7f7 0%, #f0fafa 40%, #f8fffd 100%)",
+    background: "linear-gradient(160deg, #d4e6c4 0%, #E3EED4 40%, #f4fbf0 100%)",
     paddingTop: 64,
   },
   /* ── hero ── */
@@ -66,9 +66,9 @@ const S = {
     display: "inline-flex",
     alignItems: "center",
     gap: 6,
-    background: "rgba(20,88,88,0.08)",
-    border: "1px solid rgba(20,88,88,0.18)",
-    color: "#145858",
+    background: "rgba(55,85,52,0.08)",
+    border: "1px solid rgba(55,85,52,0.18)",
+    color: "#375534",
     fontSize: 12,
     fontWeight: 600,
     letterSpacing: "0.08em",
@@ -78,23 +78,23 @@ const S = {
     marginBottom: 24,
   },
   heroTitle: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 800,
     fontSize: "clamp(36px, 6vw, 68px)",
     lineHeight: 1.08,
     letterSpacing: "-1.5px",
-    color: "#0d2b2b",
+    color: "#0F2A1D",
     margin: "0 auto 20px",
     maxWidth: 780,
   },
   heroTitleAccent: {
-    background: "linear-gradient(135deg, #145858 0%, #2a9090 50%, #F7B318 100%)",
+    background: "linear-gradient(135deg, #0F2A1D 0%, #375534 50%, #6B9071 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
   },
   heroSub: {
-    color: "#4a7070",
+    color: "#375534",
     fontSize: "clamp(16px, 2.5vw, 20px)",
     fontWeight: 400,
     maxWidth: 540,
@@ -115,36 +115,36 @@ const S = {
   card: {
     background: "#ffffff",
     borderRadius: 20,
-    border: "1px solid rgba(20,88,88,0.1)",
-    boxShadow: "0 4px 24px rgba(20,88,88,0.08)",
+    border: "1px solid rgba(55,85,52,0.1)",
+    boxShadow: "0 4px 24px rgba(55,85,52,0.08)",
     padding: "36px 40px",
     transition: "box-shadow 0.25s ease, transform 0.25s ease",
   },
   cardTitle: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 20,
-    color: "#0d2b2b",
+    color: "#0F2A1D",
     marginBottom: 6,
     display: "flex",
     alignItems: "center",
     gap: 10,
   },
   cardSubtitle: {
-    color: "#4a7070",
+    color: "#375534",
     fontSize: 14,
     marginBottom: 28,
     lineHeight: 1.5,
   },
   /* ── upload zone ── */
   uploadZone: {
-    border: "2px dashed rgba(20,88,88,0.3)",
+    border: "2px dashed rgba(55,85,52,0.3)",
     borderRadius: 16,
     padding: "40px 24px",
     textAlign: "center" as const,
     cursor: "pointer",
     transition: "all 0.25s ease",
-    background: "#f8fffe",
+    background: "#f4fbf0",
     position: "relative" as const,
   },
   uploadIcon: {
@@ -153,14 +153,14 @@ const S = {
     display: "block",
   },
   uploadText: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 600,
     fontSize: 16,
-    color: "#145858",
+    color: "#375534",
     marginBottom: 6,
   },
   uploadHelper: {
-    color: "#7aacac",
+    color: "#6B9071",
     fontSize: 13,
     lineHeight: 1.5,
   },
@@ -179,9 +179,9 @@ const S = {
     justifyContent: "center",
     gap: 8,
     padding: "10px 16px",
-    background: "rgba(20,88,88,0.07)",
+    background: "rgba(55,85,52,0.07)",
     borderRadius: 10,
-    color: "#145858",
+    color: "#375534",
     fontSize: 14,
     fontWeight: 500,
   },
@@ -191,17 +191,17 @@ const S = {
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    background: "linear-gradient(135deg, #F7B318 0%, #e8a010 100%)",
-    color: "#0d2b2b",
+    background: "linear-gradient(135deg, #6B9071 0%, #375534 100%)",
+    color: "#0F2A1D",
     border: "none",
     borderRadius: 12,
     padding: "14px 32px",
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 15,
     cursor: "pointer",
     transition: "all 0.2s ease",
-    boxShadow: "0 4px 16px rgba(247,179,24,0.35)",
+    boxShadow: "0 4px 16px rgba(107,144,113,0.35)",
     marginTop: 20,
     width: "100%",
     letterSpacing: "0.01em",
@@ -211,17 +211,17 @@ const S = {
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    background: "linear-gradient(135deg, #145858 0%, #1a6e6e 100%)",
+    background: "linear-gradient(135deg, #0F2A1D 0%, #375534 100%)",
     color: "#fff",
     border: "none",
     borderRadius: 12,
     padding: "14px 32px",
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 15,
     cursor: "pointer",
     transition: "all 0.2s ease",
-    boxShadow: "0 4px 20px rgba(20,88,88,0.3)",
+    boxShadow: "0 4px 20px rgba(55,85,52,0.3)",
     marginTop: 16,
     width: "100%",
     letterSpacing: "0.01em",
@@ -230,12 +230,12 @@ const S = {
   textarea: {
     width: "100%",
     borderRadius: 14,
-    border: "1.5px solid rgba(20,88,88,0.2)",
+    border: "1.5px solid rgba(55,85,52,0.2)",
     padding: "16px 18px",
     fontSize: 15,
-    fontFamily: "'DM Sans', sans-serif",
-    color: "#0d2b2b",
-    background: "#f8fffe",
+    fontFamily: "'Raleway', sans-serif",
+    color: "#0F2A1D",
+    background: "#f4fbf0",
     resize: "none" as const,
     lineHeight: 1.6,
     transition: "border-color 0.2s ease, box-shadow 0.2s ease",
@@ -243,10 +243,10 @@ const S = {
   },
   /* ── answer ── */
   answerCard: {
-    background: "linear-gradient(135deg, #145858 0%, #1a6e6e 100%)",
+    background: "linear-gradient(135deg, #0F2A1D 0%, #375534 100%)",
     borderRadius: 20,
     padding: "32px 40px",
-    boxShadow: "0 8px 32px rgba(20,88,88,0.25)",
+    boxShadow: "0 8px 32px rgba(55,85,52,0.25)",
   },
   answerHeader: {
     display: "flex",
@@ -255,9 +255,9 @@ const S = {
     marginBottom: 16,
   },
   answerBadge: {
-    background: "rgba(247,179,24,0.2)",
-    border: "1px solid rgba(247,179,24,0.4)",
-    color: "#F7B318",
+    background: "rgba(107,144,113,0.2)",
+    border: "1px solid rgba(107,144,113,0.4)",
+    color: "#6B9071",
     fontSize: 12,
     fontWeight: 700,
     letterSpacing: "0.08em",
@@ -266,7 +266,7 @@ const S = {
     borderRadius: 100,
   },
   answerTitle: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 18,
     color: "#fff",
@@ -285,14 +285,14 @@ const S = {
     alignItems: "center",
     justifyContent: "center",
     gap: 10,
-    background: "rgba(20,88,88,0.07)",
-    border: "1px solid rgba(20,88,88,0.15)",
+    background: "rgba(55,85,52,0.07)",
+    border: "1px solid rgba(55,85,52,0.15)",
     borderRadius: 100,
     padding: "10px 24px",
-    color: "#145858",
+    color: "#375534",
     fontSize: 14,
     fontWeight: 600,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     animation: "pulse 1.5s ease-in-out infinite",
   },
   /* ── how it works ── */
@@ -300,10 +300,10 @@ const S = {
     padding: "20px 0 0",
   },
   howTitle: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 22,
-    color: "#0d2b2b",
+    color: "#0F2A1D",
     marginBottom: 24,
     textAlign: "center" as const,
   },
@@ -313,8 +313,8 @@ const S = {
     gap: 16,
   },
   stepCard: {
-    background: "linear-gradient(135deg, #edf9f9 0%, #f8fffe 100%)",
-    border: "1px solid rgba(20,88,88,0.12)",
+    background: "linear-gradient(135deg, #d4e6c4 0%, #E3EED4 100%)",
+    border: "1px solid rgba(55,85,52,0.12)",
     borderRadius: 18,
     padding: "28px 24px",
     textAlign: "center" as const,
@@ -326,27 +326,27 @@ const S = {
     justifyContent: "center",
     width: 28,
     height: 28,
-    background: "#145858",
+    background: "#0F2A1D",
     color: "#fff",
     borderRadius: "50%",
     fontSize: 12,
     fontWeight: 700,
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     marginBottom: 14,
   },
   stepIcon: { fontSize: 32, display: "block", marginBottom: 12 },
   stepTitle: {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: 15,
-    color: "#0d2b2b",
+    color: "#0F2A1D",
     marginBottom: 8,
   },
-  stepDesc: { color: "#4a7070", fontSize: 13, lineHeight: 1.5 },
+  stepDesc: { color: "#375534", fontSize: 13, lineHeight: 1.5 },
   /* ── divider ── */
   divider: {
     height: 1,
-    background: "linear-gradient(90deg, transparent 0%, rgba(20,88,88,0.15) 50%, transparent 100%)",
+    background: "linear-gradient(90deg, transparent 0%, rgba(55,85,52,0.15) 50%, transparent 100%)",
     margin: "8px 0",
     border: "none",
   },
@@ -354,10 +354,10 @@ const S = {
   footer: {
     textAlign: "center" as const,
     padding: "24px",
-    color: "#7aacac",
+    color: "#6B9071",
     fontSize: 13,
-    borderTop: "1px solid rgba(20,88,88,0.1)",
-    background: "rgba(20,88,88,0.03)",
+    borderTop: "1px solid rgba(55,85,52,0.1)",
+    background: "rgba(55,85,52,0.03)",
   },
 };
 
@@ -439,30 +439,30 @@ export default function Home() {
         .hero-animate-2 { animation: floatUp 0.7s 0.15s ease both; }
         .hero-animate-3 { animation: floatUp 0.7s 0.3s ease both; }
         .card-hover:hover {
-          box-shadow: 0 12px 40px rgba(20,88,88,0.15) !important;
+          box-shadow: 0 12px 40px rgba(55,85,52,0.15) !important;
           transform: translateY(-3px);
         }
         .step-hover:hover {
           transform: translateY(-5px);
-          box-shadow: 0 12px 32px rgba(20,88,88,0.13) !important;
+          box-shadow: 0 12px 32px rgba(55,85,52,0.13) !important;
         }
         .upload-zone-hover:hover {
-          border-color: #145858 !important;
-          background: #f0fafa !important;
-          box-shadow: 0 0 0 4px rgba(20,88,88,0.08);
+          border-color: #375534 !important;
+          background: #E3EED4 !important;
+          box-shadow: 0 0 0 4px rgba(55,85,52,0.08);
         }
         .upload-zone-drag {
-          border-color: #F7B318 !important;
-          background: rgba(247,179,24,0.06) !important;
-          box-shadow: 0 0 0 4px rgba(247,179,24,0.15) !important;
+          border-color: #6B9071 !important;
+          background: rgba(107,144,113,0.06) !important;
+          box-shadow: 0 0 0 4px rgba(107,144,113,0.15) !important;
         }
         .btn-gold:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 28px rgba(247,179,24,0.5) !important;
+          box-shadow: 0 8px 28px rgba(107,144,113,0.5) !important;
         }
         .btn-teal:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 28px rgba(20,88,88,0.4) !important;
+          box-shadow: 0 8px 28px rgba(55,85,52,0.4) !important;
         }
         .btn-gold:active, .btn-teal:active { transform: translateY(0) scale(0.98); }
         .nav-link:hover {
@@ -470,8 +470,8 @@ export default function Home() {
           background: rgba(255,255,255,0.12) !important;
         }
         .textarea-focus:focus {
-          border-color: #145858 !important;
-          box-shadow: 0 0 0 3px rgba(20,88,88,0.1) !important;
+          border-color: #375534 !important;
+          box-shadow: 0 0 0 3px rgba(55,85,52,0.1) !important;
           background: #ffffff !important;
         }
         .mobile-menu {
@@ -479,13 +479,13 @@ export default function Home() {
           top: 64px;
           left: 0;
           right: 0;
-          background: #145858;
+          background: #375534;
           padding: 16px;
           display: flex;
           flex-direction: column;
           gap: 4px;
           z-index: 99;
-          box-shadow: 0 8px 24px rgba(20,88,88,0.3);
+          box-shadow: 0 8px 24px rgba(55,85,52,0.3);
         }
         @media (min-width: 600px) {
           .mobile-toggle { display: none !important; }
@@ -509,9 +509,9 @@ export default function Home() {
           <span style={{ fontSize: 22 }}>⚖️</span>
           <span>LexAI</span>
           <span style={{
-            background: "#F7B318", color: "#0d2b2b", fontSize: 10,
+            background: "#6B9071", color: "#0F2A1D", fontSize: 10,
             fontWeight: 800, padding: "2px 7px", borderRadius: 5,
-            letterSpacing: "0.05em", fontFamily: "'DM Sans', sans-serif",
+            letterSpacing: "0.05em", fontFamily: "'Raleway', sans-serif",
           }}>PRO</span>
         </a>
 
@@ -575,8 +575,8 @@ export default function Home() {
         {/* ── HERO ── */}
         <section id="hero" style={S.hero}>
           {/* bg orbs */}
-          <div className="hero-orb" style={{ width: 500, height: 500, background: "rgba(20,88,88,0.07)", top: -100, left: -100 }} />
-          <div className="hero-orb" style={{ width: 350, height: 350, background: "rgba(247,179,24,0.07)", top: 50, right: -80 }} />
+          <div className="hero-orb" style={{ width: 500, height: 500, background: "rgba(55,85,52,0.07)", top: -100, left: -100 }} />
+          <div className="hero-orb" style={{ width: 350, height: 350, background: "rgba(107,144,113,0.07)", top: 50, right: -80 }} />
 
           <div style={{ position: "relative", zIndex: 1 }}>
             <div className="hero-animate" style={S.heroBadge}>
@@ -606,9 +606,9 @@ export default function Home() {
                 style={{
                   display: "inline-flex", alignItems: "center", gap: 8,
                   background: "transparent",
-                  border: "1.5px solid rgba(20,88,88,0.25)",
-                  color: "#145858", borderRadius: 12, padding: "14px 28px",
-                  fontFamily: "'Syne', sans-serif", fontWeight: 600, fontSize: 15,
+                  border: "1.5px solid rgba(55,85,52,0.25)",
+                  color: "#375534", borderRadius: 12, padding: "14px 28px",
+                  fontFamily: "'Raleway', sans-serif", fontWeight: 600, fontSize: 15,
                   cursor: "pointer", transition: "all 0.2s ease",
                 }}
               >
@@ -619,7 +619,7 @@ export default function Home() {
             {/* trust strip */}
             <div style={{ display: "flex", gap: 24, justifyContent: "center", marginTop: 40, flexWrap: "wrap" }}>
               {["🔒 Secure Processing", "⚡ Real-Time Analysis", "🧠 AI-Powered"].map((t) => (
-                <span key={t} style={{ color: "#4a7070", fontSize: 13, fontWeight: 500, display: "flex", alignItems: "center", gap: 5 }}>
+                <span key={t} style={{ color: "#375534", fontSize: 13, fontWeight: 500, display: "flex", alignItems: "center", gap: 5 }}>
                   {t}
                 </span>
               ))}
@@ -641,7 +641,7 @@ export default function Home() {
 
             <div
               className={`upload-zone-hover ${dragging ? "upload-zone-drag" : ""}`}
-              style={{ ...S.uploadZone, borderColor: dragging ? "#F7B318" : "rgba(20,88,88,0.3)" }}
+              style={{ ...S.uploadZone, borderColor: dragging ? "#6B9071" : "rgba(55,85,52,0.3)" }}
               onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
               onDragLeave={() => setDragging(false)}
               onDrop={handleDrop}
@@ -664,10 +664,10 @@ export default function Home() {
               <div style={S.fileChosen}>
                 <span>📎</span>
                 <span style={{ fontWeight: 600 }}>{file.name}</span>
-                <span style={{ color: "#7aacac", fontSize: 12 }}>({(file.size / 1024).toFixed(1)} KB)</span>
+                <span style={{ color: "#6B9071", fontSize: 12 }}>({(file.size / 1024).toFixed(1)} KB)</span>
                 <button
                   onClick={() => setFile(null)}
-                  style={{ background: "none", border: "none", cursor: "pointer", color: "#C8714A", marginLeft: "auto", fontSize: 16 }}
+                  style={{ background: "none", border: "none", cursor: "pointer", color: "#375534", marginLeft: "auto", fontSize: 16 }}
                   title="Remove file"
                 >✕</button>
               </div>
@@ -707,8 +707,8 @@ export default function Home() {
                 if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) handleAsk();
               }}
             />
-            <p style={{ color: "#7aacac", fontSize: 12, marginTop: 6, marginBottom: 0 }}>
-              Tip: Press <kbd style={{ background: "#f0fafa", border: "1px solid rgba(20,88,88,0.2)", padding: "1px 6px", borderRadius: 5, fontSize: 11 }}>Ctrl+Enter</kbd> to submit
+            <p style={{ color: "#6B9071", fontSize: 12, marginTop: 6, marginBottom: 0 }}>
+              Tip: Press <kbd style={{ background: "#E3EED4", border: "1px solid rgba(55,85,52,0.2)", padding: "1px 6px", borderRadius: 5, fontSize: 11 }}>Ctrl+Enter</kbd> to submit
             </p>
 
             <button
@@ -773,12 +773,12 @@ export default function Home() {
           {/* ── ABOUT ── */}
           <div id="about" style={{
             ...S.card,
-            background: "linear-gradient(135deg, #f0fafa 0%, #e8f7f7 100%)",
-            border: "1px solid rgba(20,88,88,0.12)",
+            background: "linear-gradient(135deg, #e8f2e0 0%, #d4e6c4 100%)",
+            border: "1px solid rgba(55,85,52,0.12)",
           }}>
             <div style={S.cardTitle}><span>✦</span> About This Tool</div>
-            <p style={{ color: "#4a7070", fontSize: 15, lineHeight: 1.75, margin: 0 }}>
-              <strong style={{ color: "#0d2b2b" }}>AI Legal Document Analyzer</strong> combines state-of-the-art language models with document understanding to help legal professionals, students, and businesses navigate complex legal texts — without needing specialized expertise for every query.
+            <p style={{ color: "#375534", fontSize: 15, lineHeight: 1.75, margin: 0 }}>
+              <strong style={{ color: "#0F2A1D" }}>AI Legal Document Analyzer</strong> combines state-of-the-art language models with document understanding to help legal professionals, students, and businesses navigate complex legal texts — without needing specialized expertise for every query.
               Upload any PDF, ask natural-language questions, and get accurate, grounded answers instantly.
             </p>
           </div>
