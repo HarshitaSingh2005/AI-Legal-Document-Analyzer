@@ -506,7 +506,7 @@ export default function Home() {
       {/* ─────────── NAVBAR ─────────── */}
       <nav style={S.nav}>
         <a href="#" style={S.navLogo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-          <span style={{ fontSize: 22 }}></span>
+          
           <span>LexAI</span>
           <span style={{
             background: "#6B9071", color: "#0F2A1D", fontSize: 10,
@@ -580,7 +580,7 @@ export default function Home() {
 
           <div style={{ position: "relative", zIndex: 1 }}>
             <div className="hero-animate" style={S.heroBadge}>
-              <span>✦</span> AI-Powered Legal Analysis
+              AI-Powered Legal Analysis
             </div>
 
             <h1 className="hero-animate-2" style={S.heroTitle}>
@@ -599,7 +599,7 @@ export default function Home() {
                 onClick={() => scrollTo("upload")}
                 style={{ ...S.btnPrimary, width: "auto", padding: "14px 32px", marginTop: 0 }}
               >
-                 Upload PDF
+                Upload PDF
               </button>
               <button
                 onClick={() => scrollTo("how-it-works")}
@@ -618,7 +618,7 @@ export default function Home() {
 
             {/* trust strip */}
             <div style={{ display: "flex", gap: 24, justifyContent: "center", marginTop: 40, flexWrap: "wrap" }}>
-              {[" Secure Processing", " Real-Time Analysis", " AI-Powered"].map((t) => (
+              {["Secure Processing", "Real-Time Analysis", "AI-Powered"].map((t) => (
                 <span key={t} style={{ color: "#375534", fontSize: 13, fontWeight: 500, display: "flex", alignItems: "center", gap: 5 }}>
                   {t}
                 </span>
@@ -633,7 +633,7 @@ export default function Home() {
           {/* ── UPLOAD CARD ── */}
           <div id="upload" className="card-hover" style={S.card}>
             <div style={S.cardTitle}>
-              <span style={{ fontSize: 22 }}></span> Upload Legal Document
+               Upload Legal Document
             </div>
             <p style={S.cardSubtitle}>
               Drag & drop your PDF or click to browse. AI will extract and index all content automatically.
@@ -652,7 +652,7 @@ export default function Home() {
                 style={S.fileInput}
                 onChange={(e) => setFile(e.target.files?.[0] || null)}
               />
-              <span style={S.uploadIcon}></span>
+              
               <p style={S.uploadText}>{dragging ? "Drop your PDF here" : "Upload Legal PDF"}</p>
               <p style={S.uploadHelper}>
                 Only PDF files are supported.<br />
@@ -662,7 +662,7 @@ export default function Home() {
 
             {file && (
               <div style={S.fileChosen}>
-                <span>📎</span>
+                
                 <span style={{ fontWeight: 600 }}>{file.name}</span>
                 <span style={{ color: "#6B9071", fontSize: 12 }}>({(file.size / 1024).toFixed(1)} KB)</span>
                 <button
@@ -683,14 +683,14 @@ export default function Home() {
                 cursor: !file ? "not-allowed" : "pointer",
               }}
             >
-              {loading ? " Processing…" : "⬆ Upload & Analyze PDF"}
+              {loading ? "Processing…" : "Upload & Analyze PDF"}
             </button>
           </div>
 
           {/* ── ASK QUESTION CARD ── */}
           <div className="card-hover" style={S.card}>
             <div style={S.cardTitle}>
-              <span style={{ fontSize: 22 }}></span> Ask Legal Questions
+               Ask Legal Questions
             </div>
             <p style={S.cardSubtitle}>
               Ask anything about the uploaded document — clauses, obligations, risks, or summaries.
@@ -729,7 +729,7 @@ export default function Home() {
           {loading && (
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div style={S.loadingPill}>
-                <span></span> AI is processing your request…
+                AI is processing your request…
               </div>
             </div>
           )}
@@ -739,7 +739,7 @@ export default function Home() {
             <div style={S.answerCard}>
               <div style={S.answerHeader}>
                 <span style={S.answerTitle}>AI Response</span>
-                <span style={S.answerBadge}>✦ Legal Analysis</span>
+                <span style={S.answerBadge}>Legal Analysis</span>
               </div>
               <hr style={{ border: "none", borderTop: "1px solid rgba(255,255,255,0.12)", margin: "0 0 18px" }} />
               <p style={S.answerText}>{answer}</p>
@@ -750,17 +750,17 @@ export default function Home() {
 
           {/* ── HOW IT WORKS ── */}
           <div id="how-it-works" style={S.howSection}>
-            <p style={{ ...S.heroBadge, display: "flex", width: "fit-content", margin: "0 auto 12px" }}>✦ Process</p>
+            <p style={{ ...S.heroBadge, display: "flex", width: "fit-content", margin: "0 auto 12px" }}>Process</p>
             <h2 style={S.howTitle}>How It Works</h2>
             <div style={S.stepsGrid}>
               {[
-                { num: "1",  title: "Upload Legal PDF", desc: "Drag & drop or select any legal PDF document. We support contracts, agreements, briefs, and more." },
-                { num: "2", title: "AI Processes Document", desc: "Our AI reads, indexes, and understands the full legal document — structure, clauses, and context." },
-                { num: "3",  title: "Get Legal Insights", desc: "Ask plain-English questions and receive precise, contextualized answers backed by the document." },
+                { num: "1", icon: "", title: "Upload Legal PDF", desc: "Drag & drop or select any legal PDF document. We support contracts, agreements, briefs, and more." },
+                { num: "2", icon: "", title: "AI Processes Document", desc: "Our AI reads, indexes, and understands the full legal document — structure, clauses, and context." },
+                { num: "3", icon: "", title: "Get Legal Insights", desc: "Ask plain-English questions and receive precise, contextualized answers backed by the document." },
               ].map((step) => (
                 <div key={step.num} className="step-hover" style={S.stepCard}>
                   <div style={S.stepNum}>{step.num}</div>
-                  <span style={S.stepIcon}>{step.icon}</span>
+                  
                   <div style={S.stepTitle}>{step.title}</div>
                   <p style={S.stepDesc}>{step.desc}</p>
                 </div>
@@ -776,7 +776,7 @@ export default function Home() {
             background: "linear-gradient(135deg, #e8f2e0 0%, #d4e6c4 100%)",
             border: "1px solid rgba(55,85,52,0.12)",
           }}>
-            <div style={S.cardTitle}><span>✦</span> About This Tool</div>
+            <div style={S.cardTitle}>About This Tool</div>
             <p style={{ color: "#375534", fontSize: 15, lineHeight: 1.75, margin: 0 }}>
               <strong style={{ color: "#0F2A1D" }}>AI Legal Document Analyzer</strong> combines state-of-the-art language models with document understanding to help legal professionals, students, and businesses navigate complex legal texts — without needing specialized expertise for every query.
               Upload any PDF, ask natural-language questions, and get accurate, grounded answers instantly.
